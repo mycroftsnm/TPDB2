@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36109.1 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "TPDB2", "TPDB2.dtproj", "{01F7FBA0-4ED3-DD21-4F14-F1F5B67F83DA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{01F7FBA0-4ED3-DD21-4F14-F1F5B67F83DA}.Development|Default.ActiveCfg = Development
+		{01F7FBA0-4ED3-DD21-4F14-F1F5B67F83DA}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FD321EF4-B0D0-4CE1-B4A3-CA39D84DA89F}
+	EndGlobalSection
+EndGlobal
