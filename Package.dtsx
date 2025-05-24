@@ -11,28 +11,11 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="8"
-  DTS:VersionGUID="{F860A682-AA52-434F-BB0E-0AB88C604C11}">
+  DTS:VersionBuild="32"
+  DTS:VersionGUID="{E424CCE2-C647-4494-9208-3FDAAABDC711}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[arggf.ddns.net.TDChistorySales.TUIA_ALUMNOS 1]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{6724CB30-63E9-4C79-81BC-60B4314B3EBD}"
-      DTS:ObjectName="arggf.ddns.net.TDChistorySales.TUIA_ALUMNOS 1">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=arggf.ddns.net;User ID=TUIA_ALUMNOS;Initial Catalog=TDChistorySales;Provider=MSOLEDBSQL.1;Auto Translate=False;">
-          <DTS:Password
-            DTS:Name="Password"
-            Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAIkGDBw4+b0eeD5HHCY/RFgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABxc09hfOD6qr0kZHARl6tAsPkIresK9pss/Na7d3h8twAAAAAOgAAAAAIAACAAAAB0q5qpwQHIf1sYVV6xgnXvZM4+QcLb6SUHL8JzEmX4vSAAAADNsZ6jb20QTUB4VGBQCL2MO/UnAa3sax1ovp7I90JGCEAAAABFXpfRmTGwE2adAEpuw8UXH0VKNFZlqTGyMzLdu5vLoax/0YeeTygD75FY/FvwTzWvW8gcdoNI8r97TVuvuy61</DTS:Password>
-        </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[db2-mysql]"
       DTS:CreationName="ODBC"
@@ -43,18 +26,200 @@
           DTS:ConnectionString="Dsn=db2-mysql;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[db2-sqlserver]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{6724CB30-63E9-4C79-81BC-60B4314B3EBD}"
+      DTS:ObjectName="db2-sqlserver">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=arggf.ddns.net;User ID=TUIA_ALUMNOS;Initial Catalog=TDChistorySales;Provider=MSOLEDBSQL.1;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAIkGDBw4+b0eeD5HHCY/RFgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABBtKv1OfT5GbshecZBY+Znr4UIc9W1YkNpLD/bYUtMCwAAAAAOgAAAAAIAACAAAABKJ4ZJw6wKTz29UZwRjoP8AH2/OYjpF2okXgTXjCZm9CAAAAC4XyFMOV+/yBg6imCqYVpG4xBBjeaTIxjlHwLobbwGGUAAAAA5MMAWOsdfpo4E7EKvhWYD7aqqafoWx4AiFj2o8SoltcWOL3Oa6vDD5jt0YOQNr7XY5yPBicMxkvXDHOnEdj9Q</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Employee conector]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{2077232F-A23A-41D4-B4CA-463FBD21CA5D}"
+      DTS:ObjectName="Employee conector">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Datos\Employee.xls;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Holiday conector]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{DB34A2BB-64FA-4A56-8223-EC62125993A7}"
+      DTS:ObjectName="Holiday conector">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Datos\Holidays.xls;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Products conector]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{384AC381-3457-425B-B68D-4D1E95A2FB1C}"
+      DTS:ObjectName="Products conector">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="11274"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="Datos\Products.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="01               "
+              DTS:DTSID="{5A412BD6-DD67-4BAE-922C-E63978F7D173}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Kool Cola                      "
+              DTS:DTSID="{ED7702E5-98A1-4C65-8C1D-B7A4B09309CB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="1 Liter"
+              DTS:DTSID="{AB1F3DAC-2DA0-45D4-940F-55343A9496B2}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Regions conector]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{72C277AC-60CF-42F9-ADAC-1BD9703FCEF2}"
+      DTS:ObjectName="Regions conector">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="3082"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="Datos\Regions.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="West   "
+              DTS:DTSID="{D7F67AC1-50E9-4470-B668-B076E012D2C7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="California "
+              DTS:DTSID="{7FF8DB7A-B354-4097-989A-4D2C336A7D02}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="San Jose    "
+              DTS:DTSID="{B121D763-AD29-4E1C-AA08-76E5B2D69933}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="91520"
+              DTS:DTSID="{DD316E14-4797-4EFC-BCCA-2B7E15859029}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Stock conector]"
+      DTS:CreationName="FLATFILE"
+      DTS:Description="Stock"
+      DTS:DTSID="{41EA9A0D-FD4B-498A-AC62-1A886BF16E39}"
+      DTS:ObjectName="Stock conector">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="3082"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="Datos\Stock.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="03"
+              DTS:DTSID="{6DFA4223-1340-4FCC-8ABC-597778F70D16}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="01 02 2002 04 20 26 p m "
+              DTS:DTSID="{64B54DBA-5599-49B0-8634-EFFCC6349B02}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="71"
+              DTS:DTSID="{DF2D2AB6-9052-47B5-ACF7-B2948D4864FA}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
-  <DTS:Variables>
-    <DTS:Variable
-      DTS:CreationName=""
-      DTS:DTSID="{1B3EFDDC-381D-4018-A5E7-71B5C5C1EFAF}"
-      DTS:IncludeInDebugDump="6789"
-      DTS:Namespace="User"
-      DTS:ObjectName="Variable">
-      <DTS:VariableValue
-        DTS:DataType="3">0</DTS:VariableValue>
-    </DTS:Variable>
-  </DTS:Variables>
+  <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
       DTS:refId="Package\Tarea Flujo de datos"
@@ -70,11 +235,11 @@
           version="1">
           <components>
             <component
-              refId="Package\Tarea Flujo de datos\Origen de OLE DB"
+              refId="Package\Tarea Flujo de datos\Billing"
               componentClassID="Microsoft.OLEDBSource"
               contactInfo="Origen de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;7"
               description="Origen de OLE DB"
-              name="Origen de OLE DB"
+              name="Billing"
               usesDispositions="true"
               version="7">
               <properties>
@@ -119,124 +284,124 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Tarea Flujo de datos\Origen de OLE DB.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[arggf.ddns.net.TDChistorySales.TUIA_ALUMNOS 1]"
-                  connectionManagerRefId="Package.ConnectionManagers[arggf.ddns.net.TDChistorySales.TUIA_ALUMNOS 1]"
+                  refId="Package\Tarea Flujo de datos\Billing.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[db2-sqlserver]"
+                  connectionManagerRefId="Package.ConnectionManagers[db2-sqlserver]"
                   description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
                   name="OleDbConnection" />
               </connections>
               <outputs>
                 <output
-                  refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB]"
+                  refId="Package\Tarea Flujo de datos\Billing.Outputs[Salida de origen de OLE DB]"
                   name="Salida de origen de OLE DB">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[id]"
+                      refId="Package\Tarea Flujo de datos\Billing.Outputs[Salida de origen de OLE DB].Columns[id]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[id]"
-                      lineageId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[id]"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Billing.Outputs[Salida de origen de OLE DB].ExternalColumns[id]"
+                      lineageId="Package\Tarea Flujo de datos\Billing.Outputs[Salida de origen de OLE DB].Columns[id]"
                       name="id"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[billing_id]"
+                      refId="Package\Tarea Flujo de datos\Billing.Outputs[Salida de origen de OLE DB].Columns[billing_id]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[billing_id]"
-                      lineageId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[billing_id]"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Billing.Outputs[Salida de origen de OLE DB].ExternalColumns[billing_id]"
+                      lineageId="Package\Tarea Flujo de datos\Billing.Outputs[Salida de origen de OLE DB].Columns[billing_id]"
                       name="billing_id"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[date]"
+                      refId="Package\Tarea Flujo de datos\Billing.Outputs[Salida de origen de OLE DB].Columns[date]"
                       dataType="dbTimeStamp"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[date]"
-                      lineageId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[date]"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Billing.Outputs[Salida de origen de OLE DB].ExternalColumns[date]"
+                      lineageId="Package\Tarea Flujo de datos\Billing.Outputs[Salida de origen de OLE DB].Columns[date]"
                       name="date"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[customer_id]"
+                      refId="Package\Tarea Flujo de datos\Billing.Outputs[Salida de origen de OLE DB].Columns[customer_id]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[customer_id]"
-                      lineageId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[customer_id]"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Billing.Outputs[Salida de origen de OLE DB].ExternalColumns[customer_id]"
+                      lineageId="Package\Tarea Flujo de datos\Billing.Outputs[Salida de origen de OLE DB].Columns[customer_id]"
                       name="customer_id"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[employee_id]"
+                      refId="Package\Tarea Flujo de datos\Billing.Outputs[Salida de origen de OLE DB].Columns[employee_id]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[employee_id]"
-                      lineageId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[employee_id]"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Billing.Outputs[Salida de origen de OLE DB].ExternalColumns[employee_id]"
+                      lineageId="Package\Tarea Flujo de datos\Billing.Outputs[Salida de origen de OLE DB].Columns[employee_id]"
                       name="employee_id"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[product_id]"
+                      refId="Package\Tarea Flujo de datos\Billing.Outputs[Salida de origen de OLE DB].Columns[product_id]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[product_id]"
-                      lineageId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[product_id]"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Billing.Outputs[Salida de origen de OLE DB].ExternalColumns[product_id]"
+                      lineageId="Package\Tarea Flujo de datos\Billing.Outputs[Salida de origen de OLE DB].Columns[product_id]"
                       name="product_id"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[quantity]"
+                      refId="Package\Tarea Flujo de datos\Billing.Outputs[Salida de origen de OLE DB].Columns[quantity]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[quantity]"
-                      lineageId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[quantity]"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Billing.Outputs[Salida de origen de OLE DB].ExternalColumns[quantity]"
+                      lineageId="Package\Tarea Flujo de datos\Billing.Outputs[Salida de origen de OLE DB].Columns[quantity]"
                       name="quantity"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[region]"
+                      refId="Package\Tarea Flujo de datos\Billing.Outputs[Salida de origen de OLE DB].Columns[region]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[region]"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Billing.Outputs[Salida de origen de OLE DB].ExternalColumns[region]"
                       length="45"
-                      lineageId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[region]"
+                      lineageId="Package\Tarea Flujo de datos\Billing.Outputs[Salida de origen de OLE DB].Columns[region]"
                       name="region"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[id]"
+                      refId="Package\Tarea Flujo de datos\Billing.Outputs[Salida de origen de OLE DB].ExternalColumns[id]"
                       dataType="i4"
                       name="id" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[billing_id]"
+                      refId="Package\Tarea Flujo de datos\Billing.Outputs[Salida de origen de OLE DB].ExternalColumns[billing_id]"
                       dataType="i4"
                       name="billing_id" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[date]"
+                      refId="Package\Tarea Flujo de datos\Billing.Outputs[Salida de origen de OLE DB].ExternalColumns[date]"
                       dataType="dbTimeStamp"
                       name="date" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[customer_id]"
+                      refId="Package\Tarea Flujo de datos\Billing.Outputs[Salida de origen de OLE DB].ExternalColumns[customer_id]"
                       dataType="i4"
                       name="customer_id" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[employee_id]"
+                      refId="Package\Tarea Flujo de datos\Billing.Outputs[Salida de origen de OLE DB].ExternalColumns[employee_id]"
                       dataType="i4"
                       name="employee_id" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[product_id]"
+                      refId="Package\Tarea Flujo de datos\Billing.Outputs[Salida de origen de OLE DB].ExternalColumns[product_id]"
                       dataType="i4"
                       name="product_id" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[quantity]"
+                      refId="Package\Tarea Flujo de datos\Billing.Outputs[Salida de origen de OLE DB].ExternalColumns[quantity]"
                       dataType="i4"
                       name="quantity" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[region]"
+                      refId="Package\Tarea Flujo de datos\Billing.Outputs[Salida de origen de OLE DB].ExternalColumns[region]"
                       codePage="1252"
                       dataType="str"
                       length="45"
@@ -244,62 +409,62 @@
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB]"
+                  refId="Package\Tarea Flujo de datos\Billing.Outputs[Salida de error de origen de OLE DB]"
                   isErrorOut="true"
                   name="Salida de error de origen de OLE DB">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[id]"
+                      refId="Package\Tarea Flujo de datos\Billing.Outputs[Salida de error de origen de OLE DB].Columns[id]"
                       dataType="i4"
-                      lineageId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[id]"
+                      lineageId="Package\Tarea Flujo de datos\Billing.Outputs[Salida de error de origen de OLE DB].Columns[id]"
                       name="id" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[billing_id]"
+                      refId="Package\Tarea Flujo de datos\Billing.Outputs[Salida de error de origen de OLE DB].Columns[billing_id]"
                       dataType="i4"
-                      lineageId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[billing_id]"
+                      lineageId="Package\Tarea Flujo de datos\Billing.Outputs[Salida de error de origen de OLE DB].Columns[billing_id]"
                       name="billing_id" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[date]"
+                      refId="Package\Tarea Flujo de datos\Billing.Outputs[Salida de error de origen de OLE DB].Columns[date]"
                       dataType="dbTimeStamp"
-                      lineageId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[date]"
+                      lineageId="Package\Tarea Flujo de datos\Billing.Outputs[Salida de error de origen de OLE DB].Columns[date]"
                       name="date" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[customer_id]"
+                      refId="Package\Tarea Flujo de datos\Billing.Outputs[Salida de error de origen de OLE DB].Columns[customer_id]"
                       dataType="i4"
-                      lineageId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[customer_id]"
+                      lineageId="Package\Tarea Flujo de datos\Billing.Outputs[Salida de error de origen de OLE DB].Columns[customer_id]"
                       name="customer_id" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[employee_id]"
+                      refId="Package\Tarea Flujo de datos\Billing.Outputs[Salida de error de origen de OLE DB].Columns[employee_id]"
                       dataType="i4"
-                      lineageId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[employee_id]"
+                      lineageId="Package\Tarea Flujo de datos\Billing.Outputs[Salida de error de origen de OLE DB].Columns[employee_id]"
                       name="employee_id" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[product_id]"
+                      refId="Package\Tarea Flujo de datos\Billing.Outputs[Salida de error de origen de OLE DB].Columns[product_id]"
                       dataType="i4"
-                      lineageId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[product_id]"
+                      lineageId="Package\Tarea Flujo de datos\Billing.Outputs[Salida de error de origen de OLE DB].Columns[product_id]"
                       name="product_id" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[quantity]"
+                      refId="Package\Tarea Flujo de datos\Billing.Outputs[Salida de error de origen de OLE DB].Columns[quantity]"
                       dataType="i4"
-                      lineageId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[quantity]"
+                      lineageId="Package\Tarea Flujo de datos\Billing.Outputs[Salida de error de origen de OLE DB].Columns[quantity]"
                       name="quantity" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[region]"
+                      refId="Package\Tarea Flujo de datos\Billing.Outputs[Salida de error de origen de OLE DB].Columns[region]"
                       codePage="1252"
                       dataType="str"
                       length="45"
-                      lineageId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[region]"
+                      lineageId="Package\Tarea Flujo de datos\Billing.Outputs[Salida de error de origen de OLE DB].Columns[region]"
                       name="region" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      refId="Package\Tarea Flujo de datos\Billing.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      lineageId="Package\Tarea Flujo de datos\Billing.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      refId="Package\Tarea Flujo de datos\Billing.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      lineageId="Package\Tarea Flujo de datos\Billing.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -308,11 +473,1216 @@
               </outputs>
             </component>
             <component
-              refId="Package\Tarea Flujo de datos\Origen ODBC"
+              refId="Package\Tarea Flujo de datos\Customer R"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Extrae datos de un archivo XML. Por ejemplo, se usa para extraer los datos de catálogo de un archivo XML que representa catálogos y elementos de catálogo. Antes de usar la tarea, se debe especificar el esquema y generar una salida para cada elemento XML.;Microsoft Corporation;Microsoft SQL Server; Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;2"
+              description="Extrae datos de un archivo XML. Por ejemplo, se usa para extraer los datos de catálogo de un archivo XML que representa catálogos y elementos de catálogo. Antes de usar la tarea, se debe especificar el esquema y generar una salida para cada elemento XML."
+              name="Customer R"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.XmlSourceAdapter</property>
+                <property
+                  dataType="System.String"
+                  description="Datos XML que usa el adaptador de origen XML."
+                  expressionType="Notify"
+                  name="XMLData">Datos\Customer_R.xml</property>
+                <property
+                  dataType="System.String"
+                  description="Variable que usa el adaptador de origen XML para especificar datos XML."
+                  name="XMLDataVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Define cómo obtiene el adaptador de origen XML los datos XML."
+                  name="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="Definición de esquema XML que usa el adaptador de origen XML."
+                  expressionType="Notify"
+                  name="XMLSchemaDefinition">Datos\Customer_R.xsd</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Identifica si se usará el esquema insertado."
+                  name="UseInlineSchema">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Define cómo se asignan los tipos de enteros XML."
+                  name="XMLIntegerMapping"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.XmlSourceAdapter+XMLIntegerMappingConverter">0</property>
+              </properties>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de datos\Customer R.Outputs[cliente]"
+                  name="cliente">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Identifica el conjunto de filas asociado a la salida."
+                      name="RowsetID">cliente</property>
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Customer R.Outputs[cliente].Columns[CUSTOMER_ID]"
+                      dataType="ui2"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Customer R.Outputs[cliente].ExternalColumns[CUSTOMER_ID]"
+                      lineageId="Package\Tarea Flujo de datos\Customer R.Outputs[cliente].Columns[CUSTOMER_ID]"
+                      name="CUSTOMER_ID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Customer R.Outputs[cliente].Columns[FULL_NAME]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Customer R.Outputs[cliente].ExternalColumns[FULL_NAME]"
+                      length="255"
+                      lineageId="Package\Tarea Flujo de datos\Customer R.Outputs[cliente].Columns[FULL_NAME]"
+                      name="FULL_NAME"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Customer R.Outputs[cliente].Columns[BIRTH_DATE]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Customer R.Outputs[cliente].ExternalColumns[BIRTH_DATE]"
+                      length="255"
+                      lineageId="Package\Tarea Flujo de datos\Customer R.Outputs[cliente].Columns[BIRTH_DATE]"
+                      name="BIRTH_DATE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Customer R.Outputs[cliente].Columns[CITY]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Customer R.Outputs[cliente].ExternalColumns[CITY]"
+                      length="255"
+                      lineageId="Package\Tarea Flujo de datos\Customer R.Outputs[cliente].Columns[CITY]"
+                      name="CITY"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Customer R.Outputs[cliente].Columns[STATE]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Customer R.Outputs[cliente].ExternalColumns[STATE]"
+                      length="255"
+                      lineageId="Package\Tarea Flujo de datos\Customer R.Outputs[cliente].Columns[STATE]"
+                      name="STATE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Customer R.Outputs[cliente].Columns[ZIPCODE]"
+                      dataType="ui4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Customer R.Outputs[cliente].ExternalColumns[ZIPCODE]"
+                      lineageId="Package\Tarea Flujo de datos\Customer R.Outputs[cliente].Columns[ZIPCODE]"
+                      name="ZIPCODE"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Customer R.Outputs[cliente].ExternalColumns[CUSTOMER_ID]"
+                      dataType="ui2"
+                      name="CUSTOMER_ID">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.UInt16</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Customer R.Outputs[cliente].ExternalColumns[FULL_NAME]"
+                      dataType="wstr"
+                      length="255"
+                      name="FULL_NAME">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.String</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Customer R.Outputs[cliente].ExternalColumns[BIRTH_DATE]"
+                      dataType="wstr"
+                      length="255"
+                      name="BIRTH_DATE">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.String</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Customer R.Outputs[cliente].ExternalColumns[CITY]"
+                      dataType="wstr"
+                      length="255"
+                      name="CITY">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.String</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Customer R.Outputs[cliente].ExternalColumns[STATE]"
+                      dataType="wstr"
+                      length="255"
+                      name="STATE">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.String</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Customer R.Outputs[cliente].ExternalColumns[ZIPCODE]"
+                      dataType="ui4"
+                      name="ZIPCODE">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.UInt32</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Tarea Flujo de datos\Customer R.Outputs[Salida de error de cliente]"
+                  isErrorOut="true"
+                  name="Salida de error de cliente">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Identifica el conjunto de filas asociado a la salida."
+                      name="RowsetID">cliente</property>
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Customer R.Outputs[Salida de error de cliente].Columns[CUSTOMER_ID]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Customer R.Outputs[Salida de error de cliente].ExternalColumns[CUSTOMER_ID]"
+                      lineageId="Package\Tarea Flujo de datos\Customer R.Outputs[Salida de error de cliente].Columns[CUSTOMER_ID]"
+                      name="CUSTOMER_ID" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Customer R.Outputs[Salida de error de cliente].Columns[FULL_NAME]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Customer R.Outputs[Salida de error de cliente].ExternalColumns[FULL_NAME]"
+                      lineageId="Package\Tarea Flujo de datos\Customer R.Outputs[Salida de error de cliente].Columns[FULL_NAME]"
+                      name="FULL_NAME" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Customer R.Outputs[Salida de error de cliente].Columns[BIRTH_DATE]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Customer R.Outputs[Salida de error de cliente].ExternalColumns[BIRTH_DATE]"
+                      lineageId="Package\Tarea Flujo de datos\Customer R.Outputs[Salida de error de cliente].Columns[BIRTH_DATE]"
+                      name="BIRTH_DATE" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Customer R.Outputs[Salida de error de cliente].Columns[CITY]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Customer R.Outputs[Salida de error de cliente].ExternalColumns[CITY]"
+                      lineageId="Package\Tarea Flujo de datos\Customer R.Outputs[Salida de error de cliente].Columns[CITY]"
+                      name="CITY" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Customer R.Outputs[Salida de error de cliente].Columns[STATE]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Customer R.Outputs[Salida de error de cliente].ExternalColumns[STATE]"
+                      lineageId="Package\Tarea Flujo de datos\Customer R.Outputs[Salida de error de cliente].Columns[STATE]"
+                      name="STATE" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Customer R.Outputs[Salida de error de cliente].Columns[ZIPCODE]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Customer R.Outputs[Salida de error de cliente].ExternalColumns[ZIPCODE]"
+                      lineageId="Package\Tarea Flujo de datos\Customer R.Outputs[Salida de error de cliente].Columns[ZIPCODE]"
+                      name="ZIPCODE" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Customer R.Outputs[Salida de error de cliente].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Customer R.Outputs[Salida de error de cliente].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Customer R.Outputs[Salida de error de cliente].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Customer R.Outputs[Salida de error de cliente].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Customer R.Outputs[Salida de error de cliente].ExternalColumns[CUSTOMER_ID]"
+                      dataType="nText"
+                      name="CUSTOMER_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Customer R.Outputs[Salida de error de cliente].ExternalColumns[FULL_NAME]"
+                      dataType="nText"
+                      name="FULL_NAME" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Customer R.Outputs[Salida de error de cliente].ExternalColumns[BIRTH_DATE]"
+                      dataType="nText"
+                      name="BIRTH_DATE" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Customer R.Outputs[Salida de error de cliente].ExternalColumns[CITY]"
+                      dataType="nText"
+                      name="CITY" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Customer R.Outputs[Salida de error de cliente].ExternalColumns[STATE]"
+                      dataType="nText"
+                      name="STATE" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Customer R.Outputs[Salida de error de cliente].ExternalColumns[ZIPCODE]"
+                      dataType="nText"
+                      name="ZIPCODE" />
+                  </externalMetadataColumns>
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tarea Flujo de datos\Customer W"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Extrae datos de un archivo XML. Por ejemplo, se usa para extraer los datos de catálogo de un archivo XML que representa catálogos y elementos de catálogo. Antes de usar la tarea, se debe especificar el esquema y generar una salida para cada elemento XML.;Microsoft Corporation;Microsoft SQL Server; Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;2"
+              description="Extrae datos de un archivo XML. Por ejemplo, se usa para extraer los datos de catálogo de un archivo XML que representa catálogos y elementos de catálogo. Antes de usar la tarea, se debe especificar el esquema y generar una salida para cada elemento XML."
+              name="Customer W"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.XmlSourceAdapter</property>
+                <property
+                  dataType="System.String"
+                  description="Datos XML que usa el adaptador de origen XML."
+                  expressionType="Notify"
+                  name="XMLData">Datos\Customer_W.xml</property>
+                <property
+                  dataType="System.String"
+                  description="Variable que usa el adaptador de origen XML para especificar datos XML."
+                  name="XMLDataVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Define cómo obtiene el adaptador de origen XML los datos XML."
+                  name="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="Definición de esquema XML que usa el adaptador de origen XML."
+                  expressionType="Notify"
+                  name="XMLSchemaDefinition">Datos\Customer_W.xsd</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Identifica si se usará el esquema insertado."
+                  name="UseInlineSchema">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Define cómo se asignan los tipos de enteros XML."
+                  name="XMLIntegerMapping"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.XmlSourceAdapter+XMLIntegerMappingConverter">0</property>
+              </properties>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de datos\Customer W.Outputs[cliente]"
+                  name="cliente">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Identifica el conjunto de filas asociado a la salida."
+                      name="RowsetID">cliente</property>
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Customer W.Outputs[cliente].Columns[CUSTOMER_ID]"
+                      dataType="ui2"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Customer W.Outputs[cliente].ExternalColumns[CUSTOMER_ID]"
+                      lineageId="Package\Tarea Flujo de datos\Customer W.Outputs[cliente].Columns[CUSTOMER_ID]"
+                      name="CUSTOMER_ID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Customer W.Outputs[cliente].Columns[FULL_NAME]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Customer W.Outputs[cliente].ExternalColumns[FULL_NAME]"
+                      length="255"
+                      lineageId="Package\Tarea Flujo de datos\Customer W.Outputs[cliente].Columns[FULL_NAME]"
+                      name="FULL_NAME"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Customer W.Outputs[cliente].Columns[BIRTH_DATE]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Customer W.Outputs[cliente].ExternalColumns[BIRTH_DATE]"
+                      length="255"
+                      lineageId="Package\Tarea Flujo de datos\Customer W.Outputs[cliente].Columns[BIRTH_DATE]"
+                      name="BIRTH_DATE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Customer W.Outputs[cliente].Columns[CITY]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Customer W.Outputs[cliente].ExternalColumns[CITY]"
+                      length="255"
+                      lineageId="Package\Tarea Flujo de datos\Customer W.Outputs[cliente].Columns[CITY]"
+                      name="CITY"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Customer W.Outputs[cliente].Columns[STATE]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Customer W.Outputs[cliente].ExternalColumns[STATE]"
+                      length="255"
+                      lineageId="Package\Tarea Flujo de datos\Customer W.Outputs[cliente].Columns[STATE]"
+                      name="STATE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Customer W.Outputs[cliente].Columns[ZIPCODE]"
+                      dataType="ui4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Customer W.Outputs[cliente].ExternalColumns[ZIPCODE]"
+                      lineageId="Package\Tarea Flujo de datos\Customer W.Outputs[cliente].Columns[ZIPCODE]"
+                      name="ZIPCODE"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Customer W.Outputs[cliente].ExternalColumns[CUSTOMER_ID]"
+                      dataType="ui2"
+                      name="CUSTOMER_ID">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.UInt16</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Customer W.Outputs[cliente].ExternalColumns[FULL_NAME]"
+                      dataType="wstr"
+                      length="255"
+                      name="FULL_NAME">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.String</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Customer W.Outputs[cliente].ExternalColumns[BIRTH_DATE]"
+                      dataType="wstr"
+                      length="255"
+                      name="BIRTH_DATE">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.String</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Customer W.Outputs[cliente].ExternalColumns[CITY]"
+                      dataType="wstr"
+                      length="255"
+                      name="CITY">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.String</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Customer W.Outputs[cliente].ExternalColumns[STATE]"
+                      dataType="wstr"
+                      length="255"
+                      name="STATE">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.String</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Customer W.Outputs[cliente].ExternalColumns[ZIPCODE]"
+                      dataType="ui4"
+                      name="ZIPCODE">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.UInt32</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Tarea Flujo de datos\Customer W.Outputs[Salida de error de cliente]"
+                  isErrorOut="true"
+                  name="Salida de error de cliente">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Identifica el conjunto de filas asociado a la salida."
+                      name="RowsetID">cliente</property>
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Customer W.Outputs[Salida de error de cliente].Columns[CUSTOMER_ID]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Customer W.Outputs[Salida de error de cliente].ExternalColumns[CUSTOMER_ID]"
+                      lineageId="Package\Tarea Flujo de datos\Customer W.Outputs[Salida de error de cliente].Columns[CUSTOMER_ID]"
+                      name="CUSTOMER_ID" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Customer W.Outputs[Salida de error de cliente].Columns[FULL_NAME]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Customer W.Outputs[Salida de error de cliente].ExternalColumns[FULL_NAME]"
+                      lineageId="Package\Tarea Flujo de datos\Customer W.Outputs[Salida de error de cliente].Columns[FULL_NAME]"
+                      name="FULL_NAME" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Customer W.Outputs[Salida de error de cliente].Columns[BIRTH_DATE]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Customer W.Outputs[Salida de error de cliente].ExternalColumns[BIRTH_DATE]"
+                      lineageId="Package\Tarea Flujo de datos\Customer W.Outputs[Salida de error de cliente].Columns[BIRTH_DATE]"
+                      name="BIRTH_DATE" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Customer W.Outputs[Salida de error de cliente].Columns[CITY]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Customer W.Outputs[Salida de error de cliente].ExternalColumns[CITY]"
+                      lineageId="Package\Tarea Flujo de datos\Customer W.Outputs[Salida de error de cliente].Columns[CITY]"
+                      name="CITY" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Customer W.Outputs[Salida de error de cliente].Columns[STATE]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Customer W.Outputs[Salida de error de cliente].ExternalColumns[STATE]"
+                      lineageId="Package\Tarea Flujo de datos\Customer W.Outputs[Salida de error de cliente].Columns[STATE]"
+                      name="STATE" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Customer W.Outputs[Salida de error de cliente].Columns[ZIPCODE]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Customer W.Outputs[Salida de error de cliente].ExternalColumns[ZIPCODE]"
+                      lineageId="Package\Tarea Flujo de datos\Customer W.Outputs[Salida de error de cliente].Columns[ZIPCODE]"
+                      name="ZIPCODE" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Customer W.Outputs[Salida de error de cliente].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Customer W.Outputs[Salida de error de cliente].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Customer W.Outputs[Salida de error de cliente].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Customer W.Outputs[Salida de error de cliente].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Customer W.Outputs[Salida de error de cliente].ExternalColumns[CUSTOMER_ID]"
+                      dataType="nText"
+                      name="CUSTOMER_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Customer W.Outputs[Salida de error de cliente].ExternalColumns[FULL_NAME]"
+                      dataType="nText"
+                      name="FULL_NAME" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Customer W.Outputs[Salida de error de cliente].ExternalColumns[BIRTH_DATE]"
+                      dataType="nText"
+                      name="BIRTH_DATE" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Customer W.Outputs[Salida de error de cliente].ExternalColumns[CITY]"
+                      dataType="nText"
+                      name="CITY" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Customer W.Outputs[Salida de error de cliente].ExternalColumns[STATE]"
+                      dataType="nText"
+                      name="STATE" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Customer W.Outputs[Salida de error de cliente].ExternalColumns[ZIPCODE]"
+                      dataType="nText"
+                      name="ZIPCODE" />
+                  </externalMetadataColumns>
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tarea Flujo de datos\Employee"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Origen de Excel;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1"
+              description="Origen de Excel"
+              name="Employee"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowset">Employee$</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="Variable que contiene el comando SQL para ejecutar."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="La asignación de parámetros del comando SQL a variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarea Flujo de datos\Employee.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Employee conector]"
+                  connectionManagerRefId="Package.ConnectionManagers[Employee conector]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de datos\Employee.Outputs[Salida de origen de Excel]"
+                  name="Salida de origen de Excel">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Employee.Outputs[Salida de origen de Excel].Columns[EMPLOYEE_ID]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Employee.Outputs[Salida de origen de Excel].ExternalColumns[EMPLOYEE_ID]"
+                      lineageId="Package\Tarea Flujo de datos\Employee.Outputs[Salida de origen de Excel].Columns[EMPLOYEE_ID]"
+                      name="EMPLOYEE_ID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Employee.Outputs[Salida de origen de Excel].Columns[FULL_NAME]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Employee.Outputs[Salida de origen de Excel].ExternalColumns[FULL_NAME]"
+                      length="255"
+                      lineageId="Package\Tarea Flujo de datos\Employee.Outputs[Salida de origen de Excel].Columns[FULL_NAME]"
+                      name="FULL_NAME"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Employee.Outputs[Salida de origen de Excel].Columns[CATEGORY]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Employee.Outputs[Salida de origen de Excel].ExternalColumns[CATEGORY]"
+                      length="255"
+                      lineageId="Package\Tarea Flujo de datos\Employee.Outputs[Salida de origen de Excel].Columns[CATEGORY]"
+                      name="CATEGORY"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Employee.Outputs[Salida de origen de Excel].Columns[EMPLOYMENT_DATE]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Employee.Outputs[Salida de origen de Excel].ExternalColumns[EMPLOYMENT_DATE]"
+                      length="255"
+                      lineageId="Package\Tarea Flujo de datos\Employee.Outputs[Salida de origen de Excel].Columns[EMPLOYMENT_DATE]"
+                      name="EMPLOYMENT_DATE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Employee.Outputs[Salida de origen de Excel].Columns[BIRTH_DATE]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Employee.Outputs[Salida de origen de Excel].ExternalColumns[BIRTH_DATE]"
+                      length="255"
+                      lineageId="Package\Tarea Flujo de datos\Employee.Outputs[Salida de origen de Excel].Columns[BIRTH_DATE]"
+                      name="BIRTH_DATE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Employee.Outputs[Salida de origen de Excel].Columns[EDUCATION_LEVEL]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Employee.Outputs[Salida de origen de Excel].ExternalColumns[EDUCATION_LEVEL]"
+                      length="255"
+                      lineageId="Package\Tarea Flujo de datos\Employee.Outputs[Salida de origen de Excel].Columns[EDUCATION_LEVEL]"
+                      name="EDUCATION_LEVEL"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Employee.Outputs[Salida de origen de Excel].Columns[GENDER]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Employee.Outputs[Salida de origen de Excel].ExternalColumns[GENDER]"
+                      length="255"
+                      lineageId="Package\Tarea Flujo de datos\Employee.Outputs[Salida de origen de Excel].Columns[GENDER]"
+                      name="GENDER"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Employee.Outputs[Salida de origen de Excel].ExternalColumns[EMPLOYEE_ID]"
+                      dataType="r8"
+                      name="EMPLOYEE_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Employee.Outputs[Salida de origen de Excel].ExternalColumns[FULL_NAME]"
+                      dataType="wstr"
+                      length="255"
+                      name="FULL_NAME" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Employee.Outputs[Salida de origen de Excel].ExternalColumns[CATEGORY]"
+                      dataType="wstr"
+                      length="255"
+                      name="CATEGORY" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Employee.Outputs[Salida de origen de Excel].ExternalColumns[EMPLOYMENT_DATE]"
+                      dataType="wstr"
+                      length="255"
+                      name="EMPLOYMENT_DATE" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Employee.Outputs[Salida de origen de Excel].ExternalColumns[BIRTH_DATE]"
+                      dataType="wstr"
+                      length="255"
+                      name="BIRTH_DATE" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Employee.Outputs[Salida de origen de Excel].ExternalColumns[EDUCATION_LEVEL]"
+                      dataType="wstr"
+                      length="255"
+                      name="EDUCATION_LEVEL" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Employee.Outputs[Salida de origen de Excel].ExternalColumns[GENDER]"
+                      dataType="wstr"
+                      length="255"
+                      name="GENDER" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Tarea Flujo de datos\Employee.Outputs[Salida de error de origen de Excel]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de Excel">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Employee.Outputs[Salida de error de origen de Excel].Columns[EMPLOYEE_ID]"
+                      dataType="r8"
+                      lineageId="Package\Tarea Flujo de datos\Employee.Outputs[Salida de error de origen de Excel].Columns[EMPLOYEE_ID]"
+                      name="EMPLOYEE_ID" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Employee.Outputs[Salida de error de origen de Excel].Columns[FULL_NAME]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Tarea Flujo de datos\Employee.Outputs[Salida de error de origen de Excel].Columns[FULL_NAME]"
+                      name="FULL_NAME" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Employee.Outputs[Salida de error de origen de Excel].Columns[CATEGORY]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Tarea Flujo de datos\Employee.Outputs[Salida de error de origen de Excel].Columns[CATEGORY]"
+                      name="CATEGORY" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Employee.Outputs[Salida de error de origen de Excel].Columns[EMPLOYMENT_DATE]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Tarea Flujo de datos\Employee.Outputs[Salida de error de origen de Excel].Columns[EMPLOYMENT_DATE]"
+                      name="EMPLOYMENT_DATE" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Employee.Outputs[Salida de error de origen de Excel].Columns[BIRTH_DATE]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Tarea Flujo de datos\Employee.Outputs[Salida de error de origen de Excel].Columns[BIRTH_DATE]"
+                      name="BIRTH_DATE" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Employee.Outputs[Salida de error de origen de Excel].Columns[EDUCATION_LEVEL]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Tarea Flujo de datos\Employee.Outputs[Salida de error de origen de Excel].Columns[EDUCATION_LEVEL]"
+                      name="EDUCATION_LEVEL" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Employee.Outputs[Salida de error de origen de Excel].Columns[GENDER]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Tarea Flujo de datos\Employee.Outputs[Salida de error de origen de Excel].Columns[GENDER]"
+                      name="GENDER" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Employee.Outputs[Salida de error de origen de Excel].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Employee.Outputs[Salida de error de origen de Excel].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Employee.Outputs[Salida de error de origen de Excel].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Employee.Outputs[Salida de error de origen de Excel].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tarea Flujo de datos\Holidays"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Origen de Excel;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1"
+              description="Origen de Excel"
+              name="Holidays"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowset">Holidays$</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="Variable que contiene el comando SQL para ejecutar."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="La asignación de parámetros del comando SQL a variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarea Flujo de datos\Holidays.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Holiday conector]"
+                  connectionManagerRefId="Package.ConnectionManagers[Holiday conector]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de datos\Holidays.Outputs[Salida de origen de Excel]"
+                  name="Salida de origen de Excel">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Holidays.Outputs[Salida de origen de Excel].Columns[DATE]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Holidays.Outputs[Salida de origen de Excel].ExternalColumns[DATE]"
+                      lineageId="Package\Tarea Flujo de datos\Holidays.Outputs[Salida de origen de Excel].Columns[DATE]"
+                      name="DATE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Holidays.Outputs[Salida de origen de Excel].Columns[HOLIDAY]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Holidays.Outputs[Salida de origen de Excel].ExternalColumns[HOLIDAY]"
+                      length="255"
+                      lineageId="Package\Tarea Flujo de datos\Holidays.Outputs[Salida de origen de Excel].Columns[HOLIDAY]"
+                      name="HOLIDAY"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Holidays.Outputs[Salida de origen de Excel].ExternalColumns[DATE]"
+                      dataType="date"
+                      name="DATE" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Holidays.Outputs[Salida de origen de Excel].ExternalColumns[HOLIDAY]"
+                      dataType="wstr"
+                      length="255"
+                      name="HOLIDAY" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Tarea Flujo de datos\Holidays.Outputs[Salida de error de origen de Excel]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de Excel">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Holidays.Outputs[Salida de error de origen de Excel].Columns[DATE]"
+                      dataType="date"
+                      lineageId="Package\Tarea Flujo de datos\Holidays.Outputs[Salida de error de origen de Excel].Columns[DATE]"
+                      name="DATE" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Holidays.Outputs[Salida de error de origen de Excel].Columns[HOLIDAY]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Tarea Flujo de datos\Holidays.Outputs[Salida de error de origen de Excel].Columns[HOLIDAY]"
+                      name="HOLIDAY" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Holidays.Outputs[Salida de error de origen de Excel].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Holidays.Outputs[Salida de error de origen de Excel].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Holidays.Outputs[Salida de error de origen de Excel].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Holidays.Outputs[Salida de error de origen de Excel].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tarea Flujo de datos\Products"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Origen de archivo plano;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1"
+              description="Origen de archivo plano"
+              localeId="11274"
+              name="Products"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Especifica si las columnas de longitud cero se tratan como NULL."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre de una columna de salida que contiene el nombre de archivo. Si no se especifica ningún nombre, no se genera ninguna columna de salida con el nombre de archivo."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarea Flujo de datos\Products.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Products conector]"
+                  connectionManagerRefId="Package.ConnectionManagers[Products conector]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de datos\Products.Outputs[Salida de origen de archivo plano]"
+                  name="Salida de origen de archivo plano">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Products.Outputs[Salida de origen de archivo plano].Columns[01               ]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Products.Outputs[Salida de origen de archivo plano].ExternalColumns[01               ]"
+                      length="50"
+                      lineageId="Package\Tarea Flujo de datos\Products.Outputs[Salida de origen de archivo plano].Columns[01               ]"
+                      name="01               "
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Products.Outputs[Salida de origen de archivo plano].Columns[Kool Cola                      ]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Products.Outputs[Salida de origen de archivo plano].ExternalColumns[Kool Cola                      ]"
+                      length="50"
+                      lineageId="Package\Tarea Flujo de datos\Products.Outputs[Salida de origen de archivo plano].Columns[Kool Cola                      ]"
+                      name="Kool Cola                      "
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Products.Outputs[Salida de origen de archivo plano].Columns[1 Liter]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Products.Outputs[Salida de origen de archivo plano].ExternalColumns[1 Liter]"
+                      length="50"
+                      lineageId="Package\Tarea Flujo de datos\Products.Outputs[Salida de origen de archivo plano].Columns[1 Liter]"
+                      name="1 Liter"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Products.Outputs[Salida de origen de archivo plano].ExternalColumns[01               ]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="01               " />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Products.Outputs[Salida de origen de archivo plano].ExternalColumns[Kool Cola                      ]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Kool Cola                      " />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Products.Outputs[Salida de origen de archivo plano].ExternalColumns[1 Liter]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="1 Liter" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Tarea Flujo de datos\Products.Outputs[Salida de error de origen de archivo plano]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de archivo plano">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Products.Outputs[Salida de error de origen de archivo plano].Columns[Columna de salida de error de origen de archivo plano]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Columna de salida de error de origen de archivo plano"
+                      lineageId="Package\Tarea Flujo de datos\Products.Outputs[Salida de error de origen de archivo plano].Columns[Columna de salida de error de origen de archivo plano]"
+                      name="Columna de salida de error de origen de archivo plano" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Products.Outputs[Salida de error de origen de archivo plano].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Products.Outputs[Salida de error de origen de archivo plano].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Products.Outputs[Salida de error de origen de archivo plano].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Products.Outputs[Salida de error de origen de archivo plano].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tarea Flujo de datos\Regions"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Origen de archivo plano;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1"
+              description="Origen de archivo plano"
+              localeId="3082"
+              name="Regions"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Especifica si las columnas de longitud cero se tratan como NULL."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre de una columna de salida que contiene el nombre de archivo. Si no se especifica ningún nombre, no se genera ninguna columna de salida con el nombre de archivo."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarea Flujo de datos\Regions.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Regions conector]"
+                  connectionManagerRefId="Package.ConnectionManagers[Regions conector]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de datos\Regions.Outputs[Salida de origen de archivo plano]"
+                  name="Salida de origen de archivo plano">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Regions.Outputs[Salida de origen de archivo plano].Columns[West   ]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Regions.Outputs[Salida de origen de archivo plano].ExternalColumns[West   ]"
+                      length="50"
+                      lineageId="Package\Tarea Flujo de datos\Regions.Outputs[Salida de origen de archivo plano].Columns[West   ]"
+                      name="West   "
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Regions.Outputs[Salida de origen de archivo plano].Columns[California ]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Regions.Outputs[Salida de origen de archivo plano].ExternalColumns[California ]"
+                      length="50"
+                      lineageId="Package\Tarea Flujo de datos\Regions.Outputs[Salida de origen de archivo plano].Columns[California ]"
+                      name="California "
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Regions.Outputs[Salida de origen de archivo plano].Columns[San Jose    ]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Regions.Outputs[Salida de origen de archivo plano].ExternalColumns[San Jose    ]"
+                      length="50"
+                      lineageId="Package\Tarea Flujo de datos\Regions.Outputs[Salida de origen de archivo plano].Columns[San Jose    ]"
+                      name="San Jose    "
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Regions.Outputs[Salida de origen de archivo plano].Columns[91520]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Regions.Outputs[Salida de origen de archivo plano].ExternalColumns[91520]"
+                      length="50"
+                      lineageId="Package\Tarea Flujo de datos\Regions.Outputs[Salida de origen de archivo plano].Columns[91520]"
+                      name="91520"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Regions.Outputs[Salida de origen de archivo plano].ExternalColumns[West   ]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="West   " />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Regions.Outputs[Salida de origen de archivo plano].ExternalColumns[California ]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="California " />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Regions.Outputs[Salida de origen de archivo plano].ExternalColumns[San Jose    ]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="San Jose    " />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Regions.Outputs[Salida de origen de archivo plano].ExternalColumns[91520]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="91520" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Tarea Flujo de datos\Regions.Outputs[Salida de error de origen de archivo plano]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de archivo plano">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Regions.Outputs[Salida de error de origen de archivo plano].Columns[Columna de salida de error de origen de archivo plano]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Columna de salida de error de origen de archivo plano"
+                      lineageId="Package\Tarea Flujo de datos\Regions.Outputs[Salida de error de origen de archivo plano].Columns[Columna de salida de error de origen de archivo plano]"
+                      name="Columna de salida de error de origen de archivo plano" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Regions.Outputs[Salida de error de origen de archivo plano].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Regions.Outputs[Salida de error de origen de archivo plano].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Regions.Outputs[Salida de error de origen de archivo plano].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Regions.Outputs[Salida de error de origen de archivo plano].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tarea Flujo de datos\Server MySQL"
               componentClassID="Microsoft.SSISODBCSrc"
               contactInfo="Origen ODBC;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1"
               description="Origen ODBC"
-              name="Origen ODBC"
+              name="Server MySQL"
               usesDispositions="true"
               version="1">
               <properties>
@@ -376,7 +1746,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Tarea Flujo de datos\Origen ODBC.Connections[ODBCConnection]"
+                  refId="Package\Tarea Flujo de datos\Server MySQL.Connections[ODBCConnection]"
                   connectionManagerID="Package.ConnectionManagers[db2-mysql]"
                   connectionManagerRefId="Package.ConnectionManagers[db2-mysql]"
                   description="Conexión de runtime de ODBC usada para acceder a la base de datos."
@@ -384,7 +1754,7 @@
               </connections>
               <outputs>
                 <output
-                  refId="Package\Tarea Flujo de datos\Origen ODBC.Outputs[Salida de origen de ODBC]"
+                  refId="Package\Tarea Flujo de datos\Server MySQL.Outputs[Salida de origen de ODBC]"
                   errorRowDisposition="FailComponent"
                   name="Salida de origen de ODBC"
                   truncationRowDisposition="FailComponent">
@@ -392,20 +1762,169 @@
                     isUsed="True" />
                 </output>
                 <output
-                  refId="Package\Tarea Flujo de datos\Origen ODBC.Outputs[Salida de error de origen de ODBC]"
+                  refId="Package\Tarea Flujo de datos\Server MySQL.Outputs[Salida de error de origen de ODBC]"
                   isErrorOut="true"
                   name="Salida de error de origen de ODBC">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen ODBC.Outputs[Salida de error de origen de ODBC].Columns[ErrorCode]"
+                      refId="Package\Tarea Flujo de datos\Server MySQL.Outputs[Salida de error de origen de ODBC].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Tarea Flujo de datos\Origen ODBC.Outputs[Salida de error de origen de ODBC].Columns[ErrorCode]"
+                      lineageId="Package\Tarea Flujo de datos\Server MySQL.Outputs[Salida de error de origen de ODBC].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen ODBC.Outputs[Salida de error de origen de ODBC].Columns[ErrorColumn]"
+                      refId="Package\Tarea Flujo de datos\Server MySQL.Outputs[Salida de error de origen de ODBC].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Tarea Flujo de datos\Origen ODBC.Outputs[Salida de error de origen de ODBC].Columns[ErrorColumn]"
+                      lineageId="Package\Tarea Flujo de datos\Server MySQL.Outputs[Salida de error de origen de ODBC].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tarea Flujo de datos\Stock"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Origen de archivo plano;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1"
+              description="Origen de archivo plano"
+              localeId="3082"
+              name="Stock"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Especifica si las columnas de longitud cero se tratan como NULL."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre de una columna de salida que contiene el nombre de archivo. Si no se especifica ningún nombre, no se genera ninguna columna de salida con el nombre de archivo."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarea Flujo de datos\Stock.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Stock conector]"
+                  connectionManagerRefId="Package.ConnectionManagers[Stock conector]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de datos\Stock.Outputs[Salida de origen de archivo plano]"
+                  name="Salida de origen de archivo plano">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Stock.Outputs[Salida de origen de archivo plano].Columns[03]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Stock.Outputs[Salida de origen de archivo plano].ExternalColumns[03]"
+                      length="50"
+                      lineageId="Package\Tarea Flujo de datos\Stock.Outputs[Salida de origen de archivo plano].Columns[03]"
+                      name="03"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Stock.Outputs[Salida de origen de archivo plano].Columns[01 02 2002 04 20 26 p m ]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Stock.Outputs[Salida de origen de archivo plano].ExternalColumns[01 02 2002 04 20 26 p m ]"
+                      length="50"
+                      lineageId="Package\Tarea Flujo de datos\Stock.Outputs[Salida de origen de archivo plano].Columns[01 02 2002 04 20 26 p m ]"
+                      name="01 02 2002 04 20 26 p m "
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Stock.Outputs[Salida de origen de archivo plano].Columns[71]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Stock.Outputs[Salida de origen de archivo plano].ExternalColumns[71]"
+                      length="50"
+                      lineageId="Package\Tarea Flujo de datos\Stock.Outputs[Salida de origen de archivo plano].Columns[71]"
+                      name="71"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Stock.Outputs[Salida de origen de archivo plano].ExternalColumns[03]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="03" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Stock.Outputs[Salida de origen de archivo plano].ExternalColumns[01 02 2002 04 20 26 p m ]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="01 02 2002 04 20 26 p m " />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Stock.Outputs[Salida de origen de archivo plano].ExternalColumns[71]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="71" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Tarea Flujo de datos\Stock.Outputs[Salida de error de origen de archivo plano]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de archivo plano">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Stock.Outputs[Salida de error de origen de archivo plano].Columns[Columna de salida de error de origen de archivo plano]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Columna de salida de error de origen de archivo plano"
+                      lineageId="Package\Tarea Flujo de datos\Stock.Outputs[Salida de error de origen de archivo plano].Columns[Columna de salida de error de origen de archivo plano]"
+                      name="Columna de salida de error de origen de archivo plano" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Stock.Outputs[Salida de error de origen de archivo plano].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Stock.Outputs[Salida de error de origen de archivo plano].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Stock.Outputs[Salida de error de origen de archivo plano].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Stock.Outputs[Salida de error de origen de archivo plano].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -441,20 +1960,48 @@
     design-time-name="Package\Tarea Flujo de datos">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="143.5,42"
-          Id="Package\Tarea Flujo de datos\Origen ODBC"
-          TopLeft="416.5,175.5" />
+          Size="122,42"
+          Id="Package\Tarea Flujo de datos\Regions"
+          TopLeft="198.397727272728,212.081438814873" />
         <NodeLayout
-          Size="166,42"
-          Id="Package\Tarea Flujo de datos\Origen de OLE DB"
-          TopLeft="200.833333333333,175.166666666667" />
+          Size="120.5,42"
+          Id="Package\Tarea Flujo de datos\Products"
+          TopLeft="199.988636363636,113.01893915791" />
+        <NodeLayout
+          Size="126,43.5"
+          Id="Package\Tarea Flujo de datos\Holidays"
+          TopLeft="43.2272727272728,160.5757569545" />
+        <NodeLayout
+          Size="120,42"
+          Id="Package\Tarea Flujo de datos\Stock"
+          TopLeft="199.136363636364,162.985795268352" />
+        <NodeLayout
+          Size="126,42"
+          Id="Package\Tarea Flujo de datos\Employee"
+          TopLeft="43.6818181818182,112.848484315279" />
+        <NodeLayout
+          Size="107.5,42"
+          Id="Package\Tarea Flujo de datos\Billing"
+          TopLeft="375.196969696969,114.093750303353" />
+        <NodeLayout
+          Size="147.5,42"
+          Id="Package\Tarea Flujo de datos\Server MySQL"
+          TopLeft="377.636363636364,162.204545520585" />
+        <NodeLayout
+          Size="135,42"
+          Id="Package\Tarea Flujo de datos\Customer R"
+          TopLeft="556.5,107.79166613126" />
+        <NodeLayout
+          Size="137,42"
+          Id="Package\Tarea Flujo de datos\Customer W"
+          TopLeft="558.5,163.583332520806" />
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Tarea Flujo de datos\Origen de OLE DB">
+    design-time-name="Package\Tarea Flujo de datos\Holidays">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -467,7 +2014,33 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Tarea Flujo de datos\Origen ODBC">
+    design-time-name="Package\Tarea Flujo de datos\Employee">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Tarea Flujo de datos\Billing">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Tarea Flujo de datos\Server MySQL">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
