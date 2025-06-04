@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="DW_BD2.sql"
+  DTS:DTSID="{5246BC39-4C7B-4103-9688-241409A3642A}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=DW_BD2.sql;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-Package-{5246BC39-4C7B-4103-9688-241409A3642A}DW_BD2.sql;Auto Translate=False;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
