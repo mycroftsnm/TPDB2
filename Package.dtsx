@@ -11,26 +11,11 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="72"
-  DTS:VersionGUID="{589734C0-B277-4FB4-8B57-172A32EEA01D}">
+  DTS:VersionBuild="73"
+  DTS:VersionGUID="{2EEFD381-A80B-4D83-AABA-4D35368A11E5}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[arggf.ddns.net.sales.tuia_alumnos]"
-      DTS:CreationName="ADO.NET:MySql.Data.MySqlClient.MySqlConnection, MySql.Data, Version=9.2.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d"
-      DTS:DTSID="{0ECCC834-FBCF-4C05-9A4B-6AA8230BF43F}"
-      DTS:ObjectName="arggf.ddns.net.sales.tuia_alumnos">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectionString="server=arggf.ddns.net;user id=tuia_alumnos;logging=True;database=sales;">
-          <DTS:Password
-            DTS:Name="password"
-            Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmExykLRYBUi4FtijNmaaEgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABe1yEfd0y4LrJjISK8pLJJTTQV4VSjyyhQZYbRzgQgEQAAAAAOgAAAAAIAACAAAACu0FL3KdhHFgtt8vaSlrSBNiOq5vPcdV0kmSHAEzSA6yAAAAA4WN+ZDjO+ysfJjhG6+iip/lDEUKyrNFBZN48BB1o4E0AAAAD3mzqDI0X+9w8sTXtXDx1AlZ5A4pMn1M2Af7hqI9vTXpqzdBAlZHAUefbVAHOiefB3qdFIGP5S0PHnZIE02Cnt</DTS:Password>
-        </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Customer]"
       DTS:CreationName="FILE"
@@ -43,75 +28,13 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Customer_output]"
-      DTS:CreationName="FLATFILE"
-      DTS:DTSID="{42867030-C5C7-4B42-AADE-F87F139C0A2B}"
-      DTS:ObjectName="Customer_output">
+      DTS:refId="Package.ConnectionManagers[DB TDC LOCAL]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{41D6F074-CE43-42C8-AADC-6F1E22AD9975}"
+      DTS:ObjectName="DB TDC LOCAL">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:Format="FixedWidth"
-          DTS:LocaleID="11274"
-          DTS:HeaderRowDelimiter="_x000D__x000A_"
-          DTS:ColumnNamesInFirstDataRow="True"
-          DTS:RowDelimiter=""
-          DTS:TextQualifier="_x003C_none_x003E_"
-          DTS:CodePage="1252"
-          DTS:ConnectionString="Customer">
-          <DTS:FlatFileColumns>
-            <DTS:FlatFileColumn
-              DTS:ColumnDelimiter=""
-              DTS:DataType="129"
-              DTS:ObjectName="Columna 0"
-              DTS:DTSID="{C05AD784-7EC6-4386-809D-A944B6260875}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnDelimiter=""
-              DTS:DataType="129"
-              DTS:ObjectName="Columna 1"
-              DTS:DTSID="{20A51A22-ADCB-464F-984F-0584BCEED530}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnDelimiter=""
-              DTS:DataType="129"
-              DTS:ObjectName="Columna 2"
-              DTS:DTSID="{B77413EF-80EE-48F2-B0DE-D70D0BF66376}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnDelimiter=""
-              DTS:DataType="129"
-              DTS:ObjectName="Columna 3"
-              DTS:DTSID="{3A24FA62-E024-4835-9623-6C0BBB1BC673}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnDelimiter=""
-              DTS:DataType="129"
-              DTS:ObjectName="Columna 4"
-              DTS:DTSID="{49486E24-2FC8-494E-80FF-102F2FEC8660}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnDelimiter=""
-              DTS:DataType="129"
-              DTS:ObjectName="Columna 5"
-              DTS:DTSID="{727B5418-95FE-498C-9B91-15AEEF54CDC6}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnDelimiter=""
-              DTS:DataType="129"
-              DTS:ObjectName="Columna 6"
-              DTS:DTSID="{B02B9A32-F872-420E-97B5-A496FDCF2E01}"
-              DTS:CreationName="" />
-          </DTS:FlatFileColumns>
-        </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[db2-mysql]"
-      DTS:CreationName="ODBC"
-      DTS:DTSID="{AC992F84-30CF-42DE-BCD5-BE256831AB87}"
-      DTS:ObjectName="db2-mysql">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectionString="Dsn=db2-mysql;" />
+          DTS:ConnectionString="Data Source=GEMIIR\SQLEXPRESS;Initial Catalog=TDC;Integrated Security=True;TrustServerCertificate=True;Application Name=SSIS-Package-{41D6F074-CE43-42C8-AADC-6F1E22AD9975}GEMIIR\SQLEXPRESS.TDC;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -127,7 +50,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmExykLRYBUi4FtijNmaaEgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADAipJJu7D2sQZuq2bqJACLsi/x170r7JDat0ybeJDKHAAAAAAOgAAAAAIAACAAAABmgOwBlNfmWC2K7Dec8SvOYTbz5PwJ2PVe+S+RMZhiSyAAAAAQHXf5dZXzS8Jlq5Hsu2Gaxhr706FWH6gqXch2BpvnQUAAAACWrOwXhnZfbu3XrhjqFomTb5rkbh0nhxtkFa0b+Ol0HVQoTXlCgdctpxapZkPfhbvtI86QdkQ5gJQO7eRQBTXJ</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmExykLRYBUi4FtijNmaaEgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACBltIzK9A/+PT+lHcvyRFpozHoS9o/TkpJdQGZ5h4FEQAAAAAOgAAAAAIAACAAAACagbxTZgCLi98M26tvzLs9hfuW+HCY+Bck7DXiphJ6rCAAAAAF0UpR0On/iiwlH7xYeeBAKhWpYCN8lbmyr5iDYSzC4EAAAADGvInfJmpOwT6PbRM5YNJZCU5tBeAZAEayNpV0vDj3maa9DfIeAKCDRt8ej2XMBsMwMWF1O3wqieo/jDmyw8pM</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -154,16 +77,6 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[GEMIIR\SQLEXPRESS.TDC]"
-      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
-      DTS:DTSID="{41D6F074-CE43-42C8-AADC-6F1E22AD9975}"
-      DTS:ObjectName="GEMIIR\SQLEXPRESS.TDC">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=GEMIIR\SQLEXPRESS;Initial Catalog=TDC;Integrated Security=True;TrustServerCertificate=True;Application Name=SSIS-Package-{41D6F074-CE43-42C8-AADC-6F1E22AD9975}GEMIIR\SQLEXPRESS.TDC;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Holiday conector]"
       DTS:CreationName="EXCEL"
       DTS:DTSID="{DB34A2BB-64FA-4A56-8223-EC62125993A7}"
@@ -176,13 +89,18 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[LocalHost.DW]"
-      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
-      DTS:DTSID="{96645760-6297-466B-8ECB-4FD8E8997AD7}"
-      DTS:ObjectName="LocalHost.DW">
+      DTS:refId="Package.ConnectionManagers[MySQL Conector]"
+      DTS:CreationName="ADO.NET:MySql.Data.MySqlClient.MySqlConnection, MySql.Data, Version=9.2.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d"
+      DTS:DTSID="{0ECCC834-FBCF-4C05-9A4B-6AA8230BF43F}"
+      DTS:ObjectName="MySQL Conector">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=.;Initial Catalog=DW;AttachDbFilename=C:\Users\Gemiir\source\repos\mycroftsnm\TPDB2\DW_BD2.mdf;Integrated Security=True;Application Name=SSIS-Package-{96645760-6297-466B-8ECB-4FD8E8997AD7}LocalHost.DW;" />
+          DTS:ConnectionString="server=arggf.ddns.net;user id=tuia_alumnos;logging=True;database=sales;">
+          <DTS:Password
+            DTS:Name="password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmExykLRYBUi4FtijNmaaEgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACrIK6l3PpDBGRFXtVDgllOp0S9cAGMnR6EjTDse2UDogAAAAAOgAAAAAIAACAAAACmtvdwMNAehvmSUqGFnNFBtw5OvpkAaepW3mqfI1ACjyAAAAAaflI1lTMtFqzLlZfc9d0DUMIsh5DGcxFHUVQhe4HTpUAAAAClY+uSXf5IWSe0kWwiEWoQF2hjVHdWYmaMOq89LuTLAyZNlEdLMSueDa1WPdBCPe253CUdGQN2O0tpaBLz5Q4F</DTS:Password>
+        </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -389,8 +307,8 @@
               <connections>
                 <connection
                   refId="Package\Tarea Flujo de datos\BD TDC billing.Connections[IDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[GEMIIR\SQLEXPRESS.TDC]"
-                  connectionManagerRefId="Package.ConnectionManagers[GEMIIR\SQLEXPRESS.TDC]"
+                  connectionManagerID="Package.ConnectionManagers[DB TDC LOCAL]"
+                  connectionManagerRefId="Package.ConnectionManagers[DB TDC LOCAL]"
                   description="Administrador de conexiones administrado"
                   name="IDbConnection" />
               </connections>
@@ -610,8 +528,8 @@
               <connections>
                 <connection
                   refId="Package\Tarea Flujo de datos\BD TDC customer.Connections[IDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[GEMIIR\SQLEXPRESS.TDC]"
-                  connectionManagerRefId="Package.ConnectionManagers[GEMIIR\SQLEXPRESS.TDC]"
+                  connectionManagerID="Package.ConnectionManagers[DB TDC LOCAL]"
+                  connectionManagerRefId="Package.ConnectionManagers[DB TDC LOCAL]"
                   description="Administrador de conexiones administrado"
                   name="IDbConnection" />
               </connections>
@@ -770,8 +688,8 @@
               <connections>
                 <connection
                   refId="Package\Tarea Flujo de datos\BD TDC products.Connections[IDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[GEMIIR\SQLEXPRESS.TDC]"
-                  connectionManagerRefId="Package.ConnectionManagers[GEMIIR\SQLEXPRESS.TDC]"
+                  connectionManagerID="Package.ConnectionManagers[DB TDC LOCAL]"
+                  connectionManagerRefId="Package.ConnectionManagers[DB TDC LOCAL]"
                   description="Administrador de conexiones administrado"
                   name="IDbConnection" />
               </connections>
@@ -899,8 +817,8 @@
               <connections>
                 <connection
                   refId="Package\Tarea Flujo de datos\BD TDC regions.Connections[IDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[GEMIIR\SQLEXPRESS.TDC]"
-                  connectionManagerRefId="Package.ConnectionManagers[GEMIIR\SQLEXPRESS.TDC]"
+                  connectionManagerID="Package.ConnectionManagers[DB TDC LOCAL]"
+                  connectionManagerRefId="Package.ConnectionManagers[DB TDC LOCAL]"
                   description="Administrador de conexiones administrado"
                   name="IDbConnection" />
               </connections>
@@ -2065,58 +1983,58 @@
                       refId="Package\Tarea Flujo de datos\Data Conversion 1.Inputs[Data Conversion Input].Columns[billing_id]"
                       cachedDataType="i4"
                       cachedName="billing_id"
-                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[billing_id]" />
+                      lineageId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de origen de ADO NET].Columns[billing_id]" />
                     <inputColumn
                       refId="Package\Tarea Flujo de datos\Data Conversion 1.Inputs[Data Conversion Input].Columns[billing_date]"
                       cachedDataType="dbTimeStamp"
                       cachedName="billing_date"
-                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[billing_date]" />
+                      lineageId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de origen de ADO NET].Columns[billing_date]" />
                     <inputColumn
                       refId="Package\Tarea Flujo de datos\Data Conversion 1.Inputs[Data Conversion Input].Columns[customer_id]"
                       cachedDataType="i2"
                       cachedName="customer_id"
-                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[customer_id]" />
+                      lineageId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de origen de ADO NET].Columns[customer_id]" />
                     <inputColumn
                       refId="Package\Tarea Flujo de datos\Data Conversion 1.Inputs[Data Conversion Input].Columns[employee_id]"
                       cachedDataType="i2"
                       cachedName="employee_id"
-                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[employee_id]" />
+                      lineageId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de origen de ADO NET].Columns[employee_id]" />
                     <inputColumn
                       refId="Package\Tarea Flujo de datos\Data Conversion 1.Inputs[Data Conversion Input].Columns[region]"
                       cachedDataType="wstr"
                       cachedLength="45"
                       cachedName="region"
-                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[region]" />
+                      lineageId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de origen de ADO NET].Columns[region]" />
                     <inputColumn
                       refId="Package\Tarea Flujo de datos\Data Conversion 1.Inputs[Data Conversion Input].Columns[product_id]"
                       cachedDataType="i2"
                       cachedName="product_id"
-                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[product_id]" />
+                      lineageId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de origen de ADO NET].Columns[product_id]" />
                     <inputColumn
                       refId="Package\Tarea Flujo de datos\Data Conversion 1.Inputs[Data Conversion Input].Columns[quantity]"
                       cachedDataType="i2"
                       cachedName="quantity"
-                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[quantity]" />
+                      lineageId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de origen de ADO NET].Columns[quantity]" />
                     <inputColumn
                       refId="Package\Tarea Flujo de datos\Data Conversion 1.Inputs[Data Conversion Input].Columns[price]"
                       cachedDataType="r8"
                       cachedName="price"
-                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[price]" />
+                      lineageId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de origen de ADO NET].Columns[price]" />
                     <inputColumn
                       refId="Package\Tarea Flujo de datos\Data Conversion 1.Inputs[Data Conversion Input].Columns[subtotal]"
                       cachedDataType="r8"
                       cachedName="subtotal"
-                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[subtotal]" />
+                      lineageId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de origen de ADO NET].Columns[subtotal]" />
                     <inputColumn
                       refId="Package\Tarea Flujo de datos\Data Conversion 1.Inputs[Data Conversion Input].Columns[discount_percentage]"
                       cachedDataType="i2"
                       cachedName="discount_percentage"
-                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[discount_percentage]" />
+                      lineageId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de origen de ADO NET].Columns[discount_percentage]" />
                     <inputColumn
                       refId="Package\Tarea Flujo de datos\Data Conversion 1.Inputs[Data Conversion Input].Columns[total_with_discount]"
                       cachedDataType="r8"
                       cachedName="total_with_discount"
-                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[total_with_discount]" />
+                      lineageId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de origen de ADO NET].Columns[total_with_discount]" />
                     <inputColumn
                       refId="Package\Tarea Flujo de datos\Data Conversion 1.Inputs[Data Conversion Input].Columns[source]"
                       cachedDataType="wstr"
@@ -2147,7 +2065,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[billing_id]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos\My SQL.Outputs[Salida de origen de ADO NET].Columns[billing_id]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -2167,7 +2085,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[billing_date]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos\My SQL.Outputs[Salida de origen de ADO NET].Columns[billing_date]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -2187,7 +2105,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[customer_id]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos\My SQL.Outputs[Salida de origen de ADO NET].Columns[customer_id]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -2207,7 +2125,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[employee_id]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos\My SQL.Outputs[Salida de origen de ADO NET].Columns[employee_id]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -2228,7 +2146,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[region]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos\My SQL.Outputs[Salida de origen de ADO NET].Columns[region]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -2248,7 +2166,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[product_id]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos\My SQL.Outputs[Salida de origen de ADO NET].Columns[product_id]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -2268,7 +2186,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[quantity]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos\My SQL.Outputs[Salida de origen de ADO NET].Columns[quantity]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -2288,7 +2206,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[price]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos\My SQL.Outputs[Salida de origen de ADO NET].Columns[price]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -2308,7 +2226,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[subtotal]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos\My SQL.Outputs[Salida de origen de ADO NET].Columns[subtotal]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -2328,7 +2246,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[discount_percentage]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos\My SQL.Outputs[Salida de origen de ADO NET].Columns[discount_percentage]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -2348,7 +2266,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[total_with_discount]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos\My SQL.Outputs[Salida de origen de ADO NET].Columns[total_with_discount]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -3117,11 +3035,11 @@
               </outputs>
             </component>
             <component
-              refId="Package\Tarea Flujo de datos\Origen de ADO NET"
+              refId="Package\Tarea Flujo de datos\My SQL"
               componentClassID="Microsoft.ManagedComponentHost"
               contactInfo="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
               description="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server."
-              name="Origen de ADO NET"
+              name="My SQL"
               usesDispositions="true"
               version="4">
               <properties>
@@ -3200,238 +3118,238 @@ LEFT JOIN BestDiscount bd ON b.billing_id = bd.billing_id;</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Tarea Flujo de datos\Origen de ADO NET.Connections[IDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[arggf.ddns.net.sales.tuia_alumnos]"
-                  connectionManagerRefId="Package.ConnectionManagers[arggf.ddns.net.sales.tuia_alumnos]"
+                  refId="Package\Tarea Flujo de datos\My SQL.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[MySQL Conector]"
+                  connectionManagerRefId="Package.ConnectionManagers[MySQL Conector]"
                   description="Administrador de conexiones administrado"
                   name="IDbConnection" />
               </connections>
               <outputs>
                 <output
-                  refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET]"
+                  refId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de origen de ADO NET]"
                   name="Salida de origen de ADO NET">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[billing_id]"
+                      refId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de origen de ADO NET].Columns[billing_id]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[billing_id]"
-                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[billing_id]"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de origen de ADO NET].ExternalColumns[billing_id]"
+                      lineageId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de origen de ADO NET].Columns[billing_id]"
                       name="billing_id"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[billing_date]"
+                      refId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de origen de ADO NET].Columns[billing_date]"
                       dataType="dbTimeStamp"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[billing_date]"
-                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[billing_date]"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de origen de ADO NET].ExternalColumns[billing_date]"
+                      lineageId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de origen de ADO NET].Columns[billing_date]"
                       name="billing_date"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[customer_id]"
+                      refId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de origen de ADO NET].Columns[customer_id]"
                       dataType="i2"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[customer_id]"
-                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[customer_id]"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de origen de ADO NET].ExternalColumns[customer_id]"
+                      lineageId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de origen de ADO NET].Columns[customer_id]"
                       name="customer_id"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[employee_id]"
+                      refId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de origen de ADO NET].Columns[employee_id]"
                       dataType="i2"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[employee_id]"
-                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[employee_id]"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de origen de ADO NET].ExternalColumns[employee_id]"
+                      lineageId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de origen de ADO NET].Columns[employee_id]"
                       name="employee_id"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[region]"
+                      refId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de origen de ADO NET].Columns[region]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[region]"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de origen de ADO NET].ExternalColumns[region]"
                       length="45"
-                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[region]"
+                      lineageId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de origen de ADO NET].Columns[region]"
                       name="region"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[product_id]"
+                      refId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de origen de ADO NET].Columns[product_id]"
                       dataType="i2"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[product_id]"
-                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[product_id]"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de origen de ADO NET].ExternalColumns[product_id]"
+                      lineageId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de origen de ADO NET].Columns[product_id]"
                       name="product_id"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[quantity]"
+                      refId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de origen de ADO NET].Columns[quantity]"
                       dataType="i2"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[quantity]"
-                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[quantity]"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de origen de ADO NET].ExternalColumns[quantity]"
+                      lineageId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de origen de ADO NET].Columns[quantity]"
                       name="quantity"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[price]"
+                      refId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de origen de ADO NET].Columns[price]"
                       dataType="r8"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[price]"
-                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[price]"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de origen de ADO NET].ExternalColumns[price]"
+                      lineageId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de origen de ADO NET].Columns[price]"
                       name="price"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[subtotal]"
+                      refId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de origen de ADO NET].Columns[subtotal]"
                       dataType="r8"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[subtotal]"
-                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[subtotal]"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de origen de ADO NET].ExternalColumns[subtotal]"
+                      lineageId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de origen de ADO NET].Columns[subtotal]"
                       name="subtotal"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[discount_percentage]"
+                      refId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de origen de ADO NET].Columns[discount_percentage]"
                       dataType="i2"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[discount_percentage]"
-                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[discount_percentage]"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de origen de ADO NET].ExternalColumns[discount_percentage]"
+                      lineageId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de origen de ADO NET].Columns[discount_percentage]"
                       name="discount_percentage"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[total_with_discount]"
+                      refId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de origen de ADO NET].Columns[total_with_discount]"
                       dataType="r8"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[total_with_discount]"
-                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[total_with_discount]"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de origen de ADO NET].ExternalColumns[total_with_discount]"
+                      lineageId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de origen de ADO NET].Columns[total_with_discount]"
                       name="total_with_discount"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[billing_id]"
+                      refId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de origen de ADO NET].ExternalColumns[billing_id]"
                       dataType="i4"
                       name="billing_id" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[billing_date]"
+                      refId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de origen de ADO NET].ExternalColumns[billing_date]"
                       dataType="dbTimeStamp"
                       name="billing_date" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[customer_id]"
+                      refId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de origen de ADO NET].ExternalColumns[customer_id]"
                       dataType="i2"
                       name="customer_id" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[employee_id]"
+                      refId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de origen de ADO NET].ExternalColumns[employee_id]"
                       dataType="i2"
                       name="employee_id" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[region]"
+                      refId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de origen de ADO NET].ExternalColumns[region]"
                       dataType="wstr"
                       length="45"
                       name="region" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[product_id]"
+                      refId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de origen de ADO NET].ExternalColumns[product_id]"
                       dataType="i2"
                       name="product_id" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[quantity]"
+                      refId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de origen de ADO NET].ExternalColumns[quantity]"
                       dataType="i2"
                       name="quantity" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[price]"
+                      refId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de origen de ADO NET].ExternalColumns[price]"
                       dataType="r8"
                       name="price" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[subtotal]"
+                      refId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de origen de ADO NET].ExternalColumns[subtotal]"
                       dataType="r8"
                       name="subtotal" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[discount_percentage]"
+                      refId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de origen de ADO NET].ExternalColumns[discount_percentage]"
                       dataType="i2"
                       name="discount_percentage" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[total_with_discount]"
+                      refId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de origen de ADO NET].ExternalColumns[total_with_discount]"
                       dataType="r8"
                       name="total_with_discount" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET]"
+                  refId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de error de origen de ADO NET]"
                   isErrorOut="true"
                   name="Salida de error de origen de ADO NET">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[billing_id]"
+                      refId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de error de origen de ADO NET].Columns[billing_id]"
                       dataType="i4"
-                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[billing_id]"
+                      lineageId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de error de origen de ADO NET].Columns[billing_id]"
                       name="billing_id" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[billing_date]"
+                      refId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de error de origen de ADO NET].Columns[billing_date]"
                       dataType="dbTimeStamp"
-                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[billing_date]"
+                      lineageId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de error de origen de ADO NET].Columns[billing_date]"
                       name="billing_date" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[customer_id]"
+                      refId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de error de origen de ADO NET].Columns[customer_id]"
                       dataType="i2"
-                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[customer_id]"
+                      lineageId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de error de origen de ADO NET].Columns[customer_id]"
                       name="customer_id" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[employee_id]"
+                      refId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de error de origen de ADO NET].Columns[employee_id]"
                       dataType="i2"
-                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[employee_id]"
+                      lineageId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de error de origen de ADO NET].Columns[employee_id]"
                       name="employee_id" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[region]"
+                      refId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de error de origen de ADO NET].Columns[region]"
                       dataType="wstr"
                       length="45"
-                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[region]"
+                      lineageId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de error de origen de ADO NET].Columns[region]"
                       name="region" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[product_id]"
+                      refId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de error de origen de ADO NET].Columns[product_id]"
                       dataType="i2"
-                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[product_id]"
+                      lineageId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de error de origen de ADO NET].Columns[product_id]"
                       name="product_id" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[quantity]"
+                      refId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de error de origen de ADO NET].Columns[quantity]"
                       dataType="i2"
-                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[quantity]"
+                      lineageId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de error de origen de ADO NET].Columns[quantity]"
                       name="quantity" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[price]"
+                      refId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de error de origen de ADO NET].Columns[price]"
                       dataType="r8"
-                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[price]"
+                      lineageId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de error de origen de ADO NET].Columns[price]"
                       name="price" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[subtotal]"
+                      refId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de error de origen de ADO NET].Columns[subtotal]"
                       dataType="r8"
-                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[subtotal]"
+                      lineageId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de error de origen de ADO NET].Columns[subtotal]"
                       name="subtotal" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[discount_percentage]"
+                      refId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de error de origen de ADO NET].Columns[discount_percentage]"
                       dataType="i2"
-                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[discount_percentage]"
+                      lineageId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de error de origen de ADO NET].Columns[discount_percentage]"
                       name="discount_percentage" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[total_with_discount]"
+                      refId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de error de origen de ADO NET].Columns[total_with_discount]"
                       dataType="r8"
-                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[total_with_discount]"
+                      lineageId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de error de origen de ADO NET].Columns[total_with_discount]"
                       name="total_with_discount" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      refId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      lineageId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      refId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      lineageId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -4203,7 +4121,7 @@ LEFT JOIN BestDiscount bd ON b.billing_id = bd.billing_id;</property>
                       refId="Package\Tarea Flujo de datos\Union All 1.Inputs[Union All Input 1].Columns[billing_id]"
                       cachedDataType="i4"
                       cachedName="billing_id"
-                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[billing_id]">
+                      lineageId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de origen de ADO NET].Columns[billing_id]">
                       <properties>
                         <property
                           containsID="true"
@@ -4216,7 +4134,7 @@ LEFT JOIN BestDiscount bd ON b.billing_id = bd.billing_id;</property>
                       refId="Package\Tarea Flujo de datos\Union All 1.Inputs[Union All Input 1].Columns[billing_date]"
                       cachedDataType="dbTimeStamp"
                       cachedName="billing_date"
-                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[billing_date]">
+                      lineageId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de origen de ADO NET].Columns[billing_date]">
                       <properties>
                         <property
                           containsID="true"
@@ -4612,7 +4530,7 @@ LEFT JOIN BestDiscount bd ON b.billing_id = bd.billing_id;</property>
               refId="Package\Tarea Flujo de datos.Paths[Salida de origen de ADO NET]"
               endId="Package\Tarea Flujo de datos\Derived Column 3.Inputs[Derived Column Input]"
               name="Salida de origen de ADO NET"
-              startId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET]" />
+              startId="Package\Tarea Flujo de datos\My SQL.Outputs[Salida de origen de ADO NET]" />
             <path
               refId="Package\Tarea Flujo de datos.Paths[Salida de origen de archivo plano]"
               endId="Package\Tarea Flujo de datos\Derived Column 2.Inputs[Derived Column Input]"
@@ -5007,27 +4925,27 @@ LEFT JOIN BestDiscount bd ON b.billing_id = bd.billing_id;</property>
           Id="Package\Tarea Flujo de datos\Billing"
           TopLeft="44.696969696969,9.593750303353" />
         <NodeLayout
-          Size="179,42"
-          Id="Package\Tarea Flujo de datos\Origen de ADO NET"
-          TopLeft="5.5,74.5" />
+          Size="119,42"
+          Id="Package\Tarea Flujo de datos\My SQL"
+          TopLeft="40.5,75.5" />
         <NodeLayout
           Size="167,42"
           Id="Package\Tarea Flujo de datos\Derived Column 3"
           TopLeft="217.5,74.5" />
         <EdgeLayout
           Id="Package\Tarea Flujo de datos.Paths[Salida de origen de ADO NET]"
-          TopLeft="184.5,95.5">
+          TopLeft="159.5,96">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="33,0"
+              EndConnector="58,0"
               Start="0,0"
-              End="25.5,0">
+              End="50.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="25.5,0" />
+                    End="50.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5065,37 +4983,25 @@ LEFT JOIN BestDiscount bd ON b.billing_id = bd.billing_id;</property>
         <NodeLayout
           Size="161,42"
           Id="Package\Tarea Flujo de datos\Data Conversion"
-          TopLeft="474.5,18.5" />
+          TopLeft="429.5,10.5" />
         <NodeLayout
           Size="170,42"
           Id="Package\Tarea Flujo de datos\Data Conversion 1"
-          TopLeft="473.5,84.5" />
+          TopLeft="432.5,79.5" />
         <EdgeLayout
           Id="Package\Tarea Flujo de datos.Paths[Derived Column Output2]"
-          TopLeft="379.5,26.5">
+          TopLeft="379.5,29">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="95,13"
+              EndConnector="50,0"
               Start="0,0"
-              End="87.5,13">
+              End="42.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="43.5,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="43.5,0"
-                    Point2="47.5,0"
-                    Point3="47.5,4" />
-                  <mssgle:LineSegment
-                    End="47.5,9" />
-                  <mssgle:CubicBezierSegment
-                    Point1="47.5,9"
-                    Point2="47.5,13"
-                    Point3="51.5,13" />
-                  <mssgle:LineSegment
-                    End="87.5,13" />
+                    End="42.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5106,30 +5012,18 @@ LEFT JOIN BestDiscount bd ON b.billing_id = bd.billing_id;</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Tarea Flujo de datos.Paths[Derived Column Output3]"
-          TopLeft="384.5,95.5">
+          TopLeft="384.5,98">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="89,10"
+              EndConnector="48,0"
               Start="0,0"
-              End="81.5,10">
+              End="40.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
                     End="40.5,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="40.5,0"
-                    Point2="44.5,0"
-                    Point3="44.5,4" />
-                  <mssgle:LineSegment
-                    End="44.5,6" />
-                  <mssgle:CubicBezierSegment
-                    Point1="44.5,6"
-                    Point2="44.5,10"
-                    Point3="48.5,10" />
-                  <mssgle:LineSegment
-                    End="81.5,10" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5141,33 +5035,33 @@ LEFT JOIN BestDiscount bd ON b.billing_id = bd.billing_id;</property>
         <NodeLayout
           Size="132,42"
           Id="Package\Tarea Flujo de datos\Union All 1"
-          TopLeft="751.5,68.5" />
+          TopLeft="656.5,48.5" />
         <EdgeLayout
           Id="Package\Tarea Flujo de datos.Paths[Data Conversion Output]"
-          TopLeft="643.5,105.5">
+          TopLeft="602.5,100.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="108,-16"
+              EndConnector="54,-25.3333333333333"
               Start="0,0"
-              End="100.5,-16">
+              End="46.5,-25.3333333333333">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="50,0" />
+                    End="27.2110091743119,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="50,0"
-                    Point2="54,0"
-                    Point3="54,-4" />
+                    Point1="27.2110091743119,0"
+                    Point2="31.2110091743119,0"
+                    Point3="31.2110091743119,-4" />
                   <mssgle:LineSegment
-                    End="54,-12" />
+                    End="31.2110091743119,-21.3333333333333" />
                   <mssgle:CubicBezierSegment
-                    Point1="54,-12"
-                    Point2="54,-16"
-                    Point3="58,-16" />
+                    Point1="31.2110091743119,-21.3333333333333"
+                    Point2="31.2110091743119,-25.3333333333333"
+                    Point3="35.2110091743119,-25.3333333333333" />
                   <mssgle:LineSegment
-                    End="100.5,-16" />
+                    End="46.5,-25.3333333333333" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5178,30 +5072,30 @@ LEFT JOIN BestDiscount bd ON b.billing_id = bd.billing_id;</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Tarea Flujo de datos.Paths[Data Conversion Output1]"
-          TopLeft="635.5,39.5">
+          TopLeft="590.5,31.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="116,44.3333333333333"
+              EndConnector="66,32.3333333333333"
               Start="0,0"
-              End="108.5,44.3333333333333">
+              End="58.5,32.3333333333333">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="63.045871559633,0" />
+                    End="34.1467889908257,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="63.045871559633,0"
-                    Point2="67.045871559633,0"
-                    Point3="67.045871559633,4" />
+                    Point1="34.1467889908257,0"
+                    Point2="38.1467889908257,0"
+                    Point3="38.1467889908257,4" />
                   <mssgle:LineSegment
-                    End="67.045871559633,40.3333333333333" />
+                    End="38.1467889908257,28.3333333333333" />
                   <mssgle:CubicBezierSegment
-                    Point1="67.045871559633,40.3333333333333"
-                    Point2="67.045871559633,44.3333333333333"
-                    Point3="71.045871559633,44.3333333333333" />
+                    Point1="38.1467889908257,28.3333333333333"
+                    Point2="38.1467889908257,32.3333333333333"
+                    Point3="42.1467889908257,32.3333333333333" />
                   <mssgle:LineSegment
-                    End="108.5,44.3333333333333" />
+                    End="58.5,32.3333333333333" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5213,33 +5107,21 @@ LEFT JOIN BestDiscount bd ON b.billing_id = bd.billing_id;</property>
         <NodeLayout
           Size="151,42"
           Id="Package\Tarea Flujo de datos\BD TDC billing"
-          TopLeft="677.5,152.5" />
+          TopLeft="826.5,54.5" />
         <EdgeLayout
           Id="Package\Tarea Flujo de datos.Paths[Union All Output 11]"
-          TopLeft="817.5,110.5">
+          TopLeft="788.5,72.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-64.5,42"
+              EndConnector="38,0"
               Start="0,0"
-              End="-64.5,34.5">
+              End="30.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,17" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,17"
-                    Point2="0,21"
-                    Point3="-4,21" />
-                  <mssgle:LineSegment
-                    End="-60.5,21" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-60.5,21"
-                    Point2="-64.5,21"
-                    Point3="-64.5,25" />
-                  <mssgle:LineSegment
-                    End="-64.5,34.5" />
+                    End="30.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5253,13 +5135,13 @@ LEFT JOIN BestDiscount bd ON b.billing_id = bd.billing_id;</property>
           ParentId="Package\Tarea Flujo de datos"
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="888,200"
-          Size="888,243"
+          PanelSize="1049,145"
+          Size="1049,188"
           Id="c617cb21-80a6-4546-99d6-49a4d09a6589"
-          TopLeft="192.5,31.5">
+          TopLeft="191.5,87.5">
           <GroupLayout.ChildrenIds>
             <s:String>Package\Tarea Flujo de datos\Billing</s:String>
-            <s:String>Package\Tarea Flujo de datos\Origen de ADO NET</s:String>
+            <s:String>Package\Tarea Flujo de datos\My SQL</s:String>
             <s:String>Package\Tarea Flujo de datos\Derived Column 3</s:String>
             <s:String>Package\Tarea Flujo de datos.Paths[Salida de origen de ADO NET]</s:String>
             <s:String>Package\Tarea Flujo de datos\Derived Column 4</s:String>
@@ -5326,7 +5208,7 @@ LEFT JOIN BestDiscount bd ON b.billing_id = bd.billing_id;</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Tarea Flujo de datos\Origen de ADO NET">
+    design-time-name="Package\Tarea Flujo de datos\My SQL">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
